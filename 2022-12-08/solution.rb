@@ -7,7 +7,7 @@ def is_visible_from_top(i, j, forrest)
     elsif current_y == 0
       return true;
     end
-    current_y -= 1
+    current_y -= 1;
   end
   return false;
 end
@@ -22,7 +22,7 @@ def is_visible_from_bottom(i, j, forrest)
     elsif current_y == height - 1
       return true;
     end
-    current_y += 1
+    current_y += 1;
   end
   return false;
 end
@@ -36,7 +36,7 @@ def is_visible_from_left(i, j, forrest)
     elsif current_x == 0
       return true;
     end
-    current_x -= 1
+    current_x -= 1;
   end
   return false;
 end
@@ -67,7 +67,7 @@ def calculate_scenic_score_top(i, j, forrest)
     if forrest[current_y][j] >= tree_height
       return i - current_y;
     end
-    current_y -= 1
+    current_y -= 1;
   end
   return i - current_y - 1;
 end
@@ -80,7 +80,7 @@ def calculate_scenic_score_bottom(i, j, forrest)
     if forrest[current_y][j] >= tree_height
       return current_y - i;
     end
-    current_y += 1
+    current_y += 1;
   end
   return current_y - i - 1;
 end
@@ -92,7 +92,7 @@ def calculate_scenic_score_left(i, j, forrest)
     if forrest[i][current_x] >= tree_height
       return j - current_x;
     end
-    current_x -= 1
+    current_x -= 1;
   end
   return j - current_x - 1;
 end
@@ -105,7 +105,7 @@ def calculate_scenic_score_right(i, j, forrest)
     if forrest[i][current_x] >= tree_height
       return current_x - j;
     end
-    current_x += 1
+    current_x += 1;
   end
   return current_x - j - 1;
 end
