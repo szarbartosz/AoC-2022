@@ -1,3 +1,5 @@
+#!/usr/bin/perl
+
 sub head_touches_tail {
   my ($head, $tail) = @_;
   return abs($head->[0] - $tail->[0]) <= 1 && abs($head->[1] - $tail->[1]) <= 1;
